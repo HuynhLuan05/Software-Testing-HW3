@@ -65,3 +65,47 @@ Dưới đây là bảng chạy checklist GUI dùng chung của nhóm (48 mục)
 | **GUI-47** | IA-04 | Lightbox / Modal ảnh hoạt động đúng | Nielsen #3, Norman #6, Shneiderman #6 | Pass | Pass | Pass | |
 | **GUI-48** | IA-04 | Undo / Hoàn tác hành động vừa thực hiện | Nielsen #3, Shneiderman #6 | Pass | Pass | Pass | |
 
+---
+
+## 3. Task 2 — Usability Testing & Usability Report
+
+### 3.1. Kịch Bản Tác Vụ (Task Scenario)
+> *"Bạn đăng ký tham gia một sự kiện quan trọng nhưng hệ thống check-in báo lỗi không tìm thấy vé. Bạn cần gửi một yêu cầu hỗ trợ (Support Request) lên ban quản trị, đính kèm ảnh chụp màn hình vé bị lỗi. Sau đó, hãy theo dõi trạng thái yêu cầu của bạn trên trang cá nhân cho đến khi Admin gửi phản hồi chính thức và xử lý thành công."*
+
+### 3.2. Thông Tin Người Tham Gia (5 Users)
+
+| Người tham gia | Vai trò / Đối tượng | Liên hệ (Email / Zalo / SĐT) | Ghi chú |
+| :--- | :--- | :--- | :--- |
+| User 1 | Sinh viên khoa CNTT | 0393xxxx114 (SĐT) | Người dùng trẻ, quen dùng web |
+| User 2 | Sinh viên năm ba | 0352xxx761 (SĐT) | Ít sử dụng các hệ thống của FIT |
+| User 3 | Anh | 0932xxxx513 (SĐT) | Ít sử dụng các hệ thống của FIT |
+| User 4 | Chị  | 0357xxx930 (SĐT) | Người dùng mới |
+| User 5 | Sinh viên năm ba | 0983xxx653 (SĐT) | Chưa quen thao tác gửi hỗ trợ |
+
+### 3.3. Các Chỉ Số Usability Thu Thập Được
+ 
+| Người tham gia | Thành Công (Yes/No) | Thời Gian (Giây) | Số Lần Do Dự / Lỗi | Điểm SUS / UEQ-S |
+| :--- | :---: | :---: | :---: | :---: |
+| User 1 | Yes | 45 | 1 | 82 |
+| User 2 | Yes | 60 | 1 | 75 |
+| User 3 | Yes | 50 | 1 | 78 |
+| User 4 | Yes | 55 | 1 | 78 |
+| User 5 | Yes | 50 | 0 | 82 |
+| **Trung bình** | **100%** | **52s** | **0.8 lần** | **79.0 / 100** |
+
+### 3.4. Nhật Ký Quan Sát Hành Vi & Điểm Đau (Observation Notes)
+*   **User 1:** Thao tác rất nhanh, tuy nhiên có bấm thử dropdown số dòng phân trang nhưng thấy nó bị đơ không phản hồi thay đổi.
+*   **User 2:** Thao tác bình thường, có nhận xét phần bộ lọc tìm kiếm của Admin nhìn hơi lệch hàng dọc, thiếu cân đối.
+*   **User 3:** Ghi nhận lỗi đơ dropdown chọn số dòng hiển thị mỗi trang ở danh sách, khiến việc thay đổi hiển thị thất bại.
+*   **User 4:** Thao tác bình thường, phản ánh lỗi lệch hàng của bộ lọc ngày (Từ ngày / Đến ngày) làm giảm thẩm mỹ trang Admin.
+*   **User 5:** Không gặp khó khăn gì trong các thao tác cơ bản khác của kịch bản test.
+
+### 3.5. Xếp Hạng Vấn Đề Theo Mức Nghiêm Trọng & Khuyến Nghị
+
+1.  **Vấn đề 1: Lỗi chức năng thay đổi số dòng mỗi trang (Pagination Size) bị đơ (Mức độ nghiêm trọng: 2 - Moderate)**
+    *   *Mô tả:* Người dùng chọn giá trị khác (10, 50, 100) ở dropdown phân trang nhưng bảng không cập nhật lại số lượng dòng hiển thị.
+    *   *Khuyến nghị:* Kết nối sự kiện select với hàm gọi lại API có tham số `pageSize` mới để render lại giao diện bảng.
+2.  **Vấn đề 2: Lỗi lệch canh hàng dọc của bộ lọc tìm kiếm Admin (Mức độ nghiêm trọng: 1 - Minor)**
+    *   *Mô tả:* Các ô chọn ngày "Từ ngày", "Đến ngày" bị lệch hàng dọc xuống dưới so với các ô nhập khác trong bộ lọc Admin (do có label phía trên còn các ô khác thì không).
+    *   *Khuyến nghị:* Đồng nhất bố cục bằng cách thêm nhãn (label) cho toàn bộ các ô nhập hoặc chuyển nhãn ngày thành placeholder để các ô nhập nằm trên một đường thẳng ngang.
+
