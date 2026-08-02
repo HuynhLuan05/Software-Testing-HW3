@@ -109,3 +109,16 @@ Dưới đây là bảng chạy checklist GUI dùng chung của nhóm (48 mục)
     *   *Mô tả:* Các ô chọn ngày "Từ ngày", "Đến ngày" bị lệch hàng dọc xuống dưới so với các ô nhập khác trong bộ lọc Admin (do có label phía trên còn các ô khác thì không).
     *   *Khuyến nghị:* Đồng nhất bố cục bằng cách thêm nhãn (label) cho toàn bộ các ô nhập hoặc chuyển nhãn ngày thành placeholder để các ô nhập nằm trên một đường thẳng ngang.
 
+---
+
+## 4. Task 3 — Báo Cáo Tương Thích Cross-Browser / Cross-Platform
+
+### 4.1. Ma Trận Đánh Giá Tương Thích
+
+| Hệ Điều Hành (OS) | Trình Duyệt (Browser) | Loại Thiết Bị (Device) | Màn D1 (Tạo) | Màn D2 (Xem) | Màn D3 (Admin) | Ghi Chú Layout / Hiển Thị |
+| :--- | :--- | :--- | :---: | :---: | :---: | :--- |
+| **Windows 11** | Chrome | Desktop | Pass | Pass | Pass | Hoạt động mượt mà |
+| **Windows 11** | Edge | Desktop | Pass | Pass | Pass | Giao diện chuẩn |
+| **Windows 11** | Firefox | Desktop | Pass | Pass | Pass | Tương thích tốt |
+| **Android** | Samsung Internet | Phone | Pass | Pass | Pass | Mobile co giãn layout tốt |
+| **iOS** | Safari | Tablet | Pass | Pass | Pass | Tương thích tốt qua giả lập/thiết bị thật |
